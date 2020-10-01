@@ -23,7 +23,7 @@ $(function() {
 
     });
     /* deleted and item  */
-    $("shopping-item").on('click', 'shopping-item-delete',function(event){
+    $("shopping-item").on('click', '#shopping-item-delete',function(event){
         $(this).remove
     });
 /* Line cross to the item () .closest */
