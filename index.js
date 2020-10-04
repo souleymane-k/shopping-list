@@ -17,7 +17,7 @@ $(function() {
 
 
    /* add li list of items with all values of botton and span*/            
-               $("shopping-item").append(
+               $(".shopping-list").append(
                  <li>
                 <span class="shopping-item">userInput</span>      
                  <div class="shopping-item-controls">
