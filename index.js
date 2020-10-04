@@ -14,18 +14,34 @@ $(function() {
          let userInput = $(event.currentTarget).find('#shopping-list-entry');
              $("#shopping-list-entry").text(`${userInput.val()}`);
                userInput.val("");
-    });  
-/* Added find item apply .toggleClass, click*/
-  $(".shopping-item").on('click', '.shopping-item-toggle', function (event){
-         event.preventdefault();
-         $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
-            
 
+
+   /* add li list of items with all values of botton and span*/            
+               $("shopping-item").append(
+                 <li>
+                 <span class="shopping-item">userInput</span>      
+                 <div class="shopping-item-controls">
+                   <button class="shopping-item-toggle">
+                     <span class="button-label">check</span>
+                   </button>
+                   <button class="shopping-item-delete">
+                     <span class="button-label">delete</span>
+                   </button>
+                 </div>
+               </li>);
+    }); 
+    /* apply toggleClass */ 
+
+  $('.shopping-item-toggle').on('click', '.button-label', function (event){
+         event.preventDefault();
+      $(this).closest('li').find('.shopping-item').toggleClass('.shopping-item__checked');
   });
+  
   /* deleted and item  */
-  $("shopping-item").on('click', '#shopping-item-delete',function(event){
-      $(this).remove
+  $(".shopping-item-delete").on('click', '.shopping-item',function(event){
+      $(this).remove();
   });
 /* Line cross to the item () .closest */
   $( "li.shopping-item__checked" ).closest( "li" ).css( "text-decoration", "line-through");
   
+});
