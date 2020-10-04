@@ -39,7 +39,7 @@ $(function() {
   
   /* deleted and item  */
   $(".shopping-item-delete").on('click', '.shopping-item',function(event){
-      $(this).remove();
+      $(this).closest('li').remove();
   });
 /* Line cross to the item () .closest */
   $( "li.shopping-item__checked" ).closest( "li" ).css( "text-decoration", "line-through");
