@@ -19,7 +19,7 @@ $(function() {
    /* add li list of items with all values of botton and span*/            
                $("shopping-item").append(
                  <li>
-                 <span class="shopping-item">userInput</span>      
+                <span class="shopping-item">userInput</span>      
                  <div class="shopping-item-controls">
                    <button class="shopping-item-toggle">
                      <span class="button-label">check</span>
@@ -32,7 +32,7 @@ $(function() {
     }); 
     /* apply toggleClass */ 
 
-  $('.shopping-item-toggle').on('click', '.button-label', function (event){
+  $('.shopping-item-toggle').on('click', '.shopping-item', function (event){
          event.preventDefault();
       $(this).closest('li').find('.shopping-item').toggleClass('.shopping-item__checked');
   });
