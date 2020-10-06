@@ -10,9 +10,9 @@ Use these methods: even.preventDefault(), togglesClass, .submit(), closest().
 $(function() {
 /* when input and submit $ add item  () even.preventDefault, submit*/
      $('#js-shopping-list-form').submit(function(event){
-        event.preventDefault();
-         const userInput = $("#shopping-list-entry").val();
-             $('#shopping-list-entry').val('');
+         event.preventDefault();
+        const userInput = $("#shopping-list-entry").val();
+      $('#shopping-list-entry').val('');
 
    /* add li list of items with all values of botton and span*/            
                $('.shopping-list').append(`<li>
